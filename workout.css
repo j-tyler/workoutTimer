@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+
+/* Workout Interval Timer CSS */
+
+div {
+  display: block;
+  margin: auto;
+  color: #333;
+}
+.wrapper {
+  background-color: #fff;
+  width: 95%;
+  height: 470px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,.8);
+}
+
+#workoutText1, #workoutText2, #workoutText3, #goText, #restText{
+  font-size: 160%;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  line-height: 180%;
+}
+
+#timer {
+  line-height: 200%;
+  font-size: 150%;
+  padding: 15px;
+  font-family: 'monospace', sans-serif;
+}
+
+.abox {
+  height: 21%;
+  text-align: center;
+}
+
+#box1 {
+  background-color: rgba(255, 189, 136, .85);
+}
+
+#box2 {
+  background-color: rgba(255, 189, 136, 0.7);
+}
+
+#box3 {
+  background-color: rgba(255, 189, 136, 0.55);
+}
+
+#startBox {
+  background-color: rgba(255, 189, 136, 1);
+  text-align: center;
+  height: 37%;
+}
+
+#startBoxCont {
+  width: 380px;
+  padding-top: 10px;
+}
+
+.abar {
+  width: 80%;
+  height: 30px;
+  transform: translate(0%, 20%);
+  border-radius: 20px;
+}
+
+.abarpiece1, .abarpiece2, .abarpiece3 {
+  background-color: rgba(43, 89, 136, 0.2);
+  height: 30px;
+  display: inline-block;
+  width: 32%;
+  border-color: red;
+}
+#clicker, #clicker2 {
+  background-color: rgb(43, 89, 136);
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-family: monospace;
+  text-shadow: 1px 1px #000000;
+  padding: 25px;
+  width: 200px;
+}
+
+/* Draw an animation, now a bit smaller */
+
+.thebox, .leg1, .leg2, .arm1, .arm2, .torso, .thehead {
+    display: block; position: absolute;
+    margin: auto; padding: 0;
+    top: 0; bottom: 0; left: 0; right:0;
+}
+
+.thebox{
+  background: transparent;
+  position: relative;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  border: 12px solid rgb(43, 89, 136);
+  overflow: hidden;
+  float: right;
+}
+
+.leg1 {
+  background:#73635D;
+  height: 35%;
+  top: auto;
+  bottom: 9px;
+  left: 28px;
+  width: 8px;
+  border-radius: 30%;
+  z-index: 0;
+  transform-origin: 50% .2em;
+  animation: rotateright 800ms -800ms infinite linear alternate;
+  overflow: hidden;
+}
+
+.arm1 {
+  background:#73635D;
+  height: 29%;
+  top: auto;
+  bottom: 55px;
+  left: 26px;
+  width: 7px;
+  border-radius: 30%;
+  z-index: 0;
+  transform-origin: 50% .1em;
+  animation: rotaterightarm 800ms -800ms infinite linear alternate;
+  overflow: hidden;
+}
+
+.leg2 {
+  background:#73635D;
+  height: 35%;
+  top: auto;
+  bottom: 9px;
+  left: -26px;
+  width: 8px;
+  border-radius: 30%;
+  z-index: 0;
+  transform-origin: 50% .2em;
+  animation: rotateleft 800ms -800ms infinite linear alternate;
+  overflow: hidden;
+}
+
+.arm2 {
+  background:#73635D;
+  height: 29%;
+  top: auto;
+  bottom: 55px;
+  left: -26px;
+  width: 7px;
+  border-radius: 30%;
+  z-index: 0;
+  transform-origin: 50% .1em;
+  animation: rotateleftarm 800ms -800ms infinite linear alternate;
+  overflow: hidden;
+}
+
+.torso {
+  background:#73635D;
+  height: 40%;
+  top: auto;
+  bottom: 45px;
+  width: 9px;
+  z-index: 0;
+  animation: rise 800ms -800ms infinite linear alternate;
+  overflow: hidden;
+}
+
+.thehead{
+  background: #73635D;
+  height: 21px;
+  width: 21px;
+  bottom: 100px;
+  border-radius: 50%;
+  border: 1px solid #73635D;
+  animation: rise 800ms -800ms infinite linear alternate;
+  overflow: hidden;
+}
+@keyframes rotateright {
+    0% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes rotaterightarm {
+    0% { transform: rotate(-150deg); }
+  100% { transform: rotate(-30deg); }
+}
+
+@keyframes rotateleft {
+    0% { transform: rotate(30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes rotateleftarm {
+    0% { transform: rotate(150deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes rise {
+    0% { transform: translateY(0px); }
+  100% { transform: translateY(2px); }
+}
+
+@media screen and (max-width: 475px) {
+    .thebox {
+        display: none;
+    }
+    #startBoxCont {
+        width: auto;
+    }
+}
