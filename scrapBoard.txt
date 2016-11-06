@@ -1,0 +1,36 @@
+Random bits of code I want to save as I continue developing features over time and across computers.
+
+###
+# Interactive Text fields
+#
+# I want a way to accept input from the user that is sleak.
+# The animation is pure CSS and let me grab user input
+##
+
+<div>
+    <input id="" type="text" value="one"/>
+</div>
+<div>
+    <input id="" type="text" value="hello"/>
+</div>
+
+input {
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-size: 14px;
+    padding: 4px 5px 4px 5px;
+    outline: 0;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.25s; 
+}
+input:focus, textarea:focus {
+    border-color: #555
+}
+
+###
+# Format Ideas
+# Change Rest timer.  Allow changing number of sets
+# Text field for workout names
+###
+
+
