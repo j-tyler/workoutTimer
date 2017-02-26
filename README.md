@@ -1,6 +1,6 @@
 # workoutTimer
 
-### a Javascript workout timer built in vanila JS
+### a Javascript workout timer built in vanilla JS
 This project started as a beginners exploration into Javascript,
 and has blossomed my passion for small, efficient, quality programs.
 
